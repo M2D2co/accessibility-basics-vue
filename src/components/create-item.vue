@@ -14,7 +14,7 @@
       required
       autocomplete="todo"
     >
-    <button type="submit" aria-label="add item to todo list">
+    <button type="submit" aria-label="add item to todo list" :disabled="!item">
       <img src="../assets/img/add.svg" alt="">
     </button>
   </form>

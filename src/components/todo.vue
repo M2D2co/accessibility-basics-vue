@@ -1,8 +1,12 @@
 <template>
   <main id="todo" class="card todo">
-    <section class="todo-list">
+    <section class="todo-list" aria-live="polite">
       <h2 class="title">Todo List</h2>
-      <ul>
+      <div v-if="outstandingTodos.length < 1" class="no-data">
+        <img src="../assets/img/todo-no-data.svg" alt="">
+        <p>No tasks yet. Use to form below to create your first todo item.</p>
+      </div>
+      <ul v-if="outstandingTodos.length > 0">
         <li v-for="(todo, index) in outstandingTodos" v-bind:key="todo.key">
           <label>
             <input

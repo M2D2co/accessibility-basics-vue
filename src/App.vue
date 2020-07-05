@@ -32,7 +32,7 @@ export default {
     #app {
       display: grid;
       grid-template-columns: 3fr 1fr;
-      grid-template-rows: max-content auto max(25%) max-content;
+      grid-template-rows: max-content auto max(33%) max-content;
       grid-template-areas:
         "header header"
         "todo resources"

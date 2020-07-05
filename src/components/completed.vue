@@ -1,8 +1,12 @@
 <template>
-  <section id="completed" class="card todo">
+  <section id="completed" class="card todo" aria-live="polite">
     <section class="todo-list">
       <h2 class="title">Completed List</h2>
-      <ul>
+      <div v-if="completedTodos.length < 1" class="no-data">
+        <img src="../assets/img/completed-no-data.svg" alt="">
+        <p>No completed tasks yet. Check a task in the todo list above to mark it as complete.</p>
+      </div>
+      <ul v-if="completedTodos.length > 0">
         <li v-for="(todo, index) in completedTodos" v-bind:key="todo.key">
           <label>
             <input

@@ -40,5 +40,6 @@ export default {
       display: flex;
       justify-content: space-between;
     }
+    .twitter a { margin-left: 3ch; }
   }
 </style>
