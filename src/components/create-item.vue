@@ -12,7 +12,6 @@
       v-model="item"
       max-length="500"
       required
-      autocomplete="todo"
     >
     <button class="submit" type="submit" aria-label="add item to todo list" :disabled="!item">
       <img src="../assets/img/add.svg" alt="">
