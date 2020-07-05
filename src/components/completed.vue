@@ -6,9 +6,9 @@
         <img src="../assets/img/completed-no-data.svg" alt="">
         <p>No completed tasks yet. Check a task in the todo list above to mark it as complete.</p>
       </div>
-      <ul v-if="completedTodos.length > 0">
-        <li v-for="(todo, index) in completedTodos" v-bind:key="todo.key">
-          <label>
+      <ul v-if="completedTodos.length > 0" class="completed-list">
+        <li class="list-item" v-for="(todo, index) in completedTodos" v-bind:key="todo.key">
+          <label class="label">
             <input
               :name="'listItem' + todo.id"
               type="checkbox"
@@ -20,7 +20,7 @@
           </label>
           <button
             type="button"
-            class="delete"
+            class="button delete"
             aria-label="delete"
             :aria-describedby="'listItem' + todo.id"
             v-on:click="onDelete(todo.id)"
@@ -57,16 +57,16 @@ export default {
   .todo-list {
     padding: theme.$default-padding;
   }
-  ul {
+  .completed-list {
     list-style-type: none;
     padding-left: 0;
   }
-  li {
+  .list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  label {
+  .label {
     display: block;
     padding: .51ex 0;
     cursor: pointer;

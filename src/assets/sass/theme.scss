@@ -7,7 +7,7 @@ $background: #fffaf4;
 
 $default-padding: 2ex 2ch;
 
-$small: 500px;
+$small: 650px;
 
 * { box-sizing: border-box; }
 
@@ -28,14 +28,15 @@ html {
 body {
   font-size: 16px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 955px;
 }
 
 h1, h2, h3, h4, h5, .title {
   color: $primary;
 }
 
-a {
+a, .resource {
   &:link,
   &:visited {
     color: $accent;
@@ -56,6 +57,7 @@ input[type="text"] {
 }
 
 button:not(:disabled) { cursor: pointer; }
+
 .submit, button[type="submit"] {
   background: $accent2;
   border: none;
@@ -113,12 +115,20 @@ input[type="checkbox"]:checked:after {
   img {
     display: block;
     width: auto;
-    height: 10rem;
+    height: 100px;
     margin: 4ex auto;
   }
   p {
     text-align: center;
     max-width: 26ch;
     margin: 2ex auto;
+  }
+}
+@media(min-width: $small) {
+  .no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img, p { margin: 4ex 1ch; }
   }
 }

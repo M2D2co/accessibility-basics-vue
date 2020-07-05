@@ -6,9 +6,9 @@
         <img src="../assets/img/todo-no-data.svg" alt="">
         <p>No tasks yet. Use to form below to create your first todo item.</p>
       </div>
-      <ul v-if="outstandingTodos.length > 0">
+      <ul v-if="outstandingTodos.length > 0" class="todos">
         <li v-for="(todo, index) in outstandingTodos" v-bind:key="todo.key">
-          <label>
+          <label class="label">
             <input
               :name="'completedItem ' + todo.id"
               v-model="outstandingTodos[index].selected"
@@ -46,20 +46,20 @@ export default {
 
 <style scoped lang="scss">
   @use '../assets/sass/theme';
-  .todo {
+  .todo-list {
+    padding: theme.$default-padding;
+  }
+  .todos {
+    list-style-type: none;
+    padding-left: 0;
+  }
+    .todo {
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .todo-list {
-    padding: theme.$default-padding;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  label {
+  .label {
     display: block;
     padding: .51ex 0;
     cursor: pointer;

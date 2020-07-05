@@ -5,38 +5,40 @@
       <li>
         Conformance Testing
         <ul>
-          <li><a href="https://accessibilityinsights.io/docs/en/web/overview" rel="noopener" target="_blank">Accessibility Insights for Web</a></li>
-          <li><a href="https://www.deque.com/axe/" rel="noopener" target="_blank">Axe</a></li>
-          <li><a href="https://developers.google.com/web/tools/lighthouse/" rel="noopener"
+          <li><a class="resource" href="https://accessibilityinsights.io/docs/en/web/overview" rel="noopener" target="_blank">Accessibility Insights for Web</a></li>
+          <li><a class="resource" href="https://www.deque.com/axe/" rel="noopener" target="_blank">Axe</a></li>
+          <li><a class="resource" href="https://developers.google.com/web/tools/lighthouse/" rel="noopener"
               target="_blank">Lighthouse</a></li>
         </ul>
       </li>
       <li>
         Development Environment
         <ul>
-          <li><a href="https://stylelint.io/" rel="noopener" target="_blank">stylelint</a></li>
-          <li><a href="https://eslint.org/" rel="noopener" target="_blank">ESLint</a></li>
-          <li><a href="https://github.com/htmlhint/HTMLHint" rel="noopener" target="_blank">HTMLHint</a></li>
+          <li><a class="resource" href="https://stylelint.io/" rel="noopener" target="_blank">stylelint</a></li>
+          <li><a class="resource" href="https://eslint.org/" rel="noopener" target="_blank">ESLint</a></li>
+          <li><a class="resource" href="https://github.com/htmlhint/HTMLHint" rel="noopener" target="_blank">HTMLHint</a></li>
         </ul>
       </li>
       <li>
         Validators
         <ul>
-          <li><a href="https://jigsaw.w3.org/css-validator/" rel="noopener" target="_blank">W3C CSS Validation Serivce</a></li>
-          <li><a href="https://validator.w3.org/" rel="noopener" target="_blank">W3C Markup Validation Serivce</a></li>
+          <li><a class="resource" href="https://jigsaw.w3.org/css-validator/" rel="noopener" target="_blank">W3C CSS Validation Serivce</a></li>
+          <li><a class="resource" href="https://validator.w3.org/" rel="noopener" target="_blank">W3C Markup Validation Serivce</a></li>
         </ul>
       </li>
       <li>
         Visualization
         <ul>
-          <li><a href="http://khan.github.io/tota11y/" rel="noopener" target="_blank">Tota11y</a></li>
-          <li><a href="https://wave.webaim.org/extension/" rel="noopener" target="_blank">Wave</a></li>
+          <li><a class="resource" href="http://khan.github.io/tota11y/" rel="noopener" target="_blank">Tota11y</a></li>
+          <li><a class="resource" href="https://wave.webaim.org/extension/" rel="noopener" target="_blank">Wave</a></li>
         </ul>
       </li>
       <li>
         Other
         <ul>
-          <li><a href="./pages/accessibility-statement.html">Accessibility Statement</a></li>
+          <li><a class="resource" href="./pages/accessibility-statement.html">
+            Accessibility Statement</a>
+          </li>
         </ul>
       </li>
     </ul>
@@ -57,7 +59,7 @@ export default {
   }
   li { list-style-type: none; }
   ul { padding-left: 0; }
-  a {
+  .resource {
     display: block;
     padding: .25ex 1ch;
     &:before {
