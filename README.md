@@ -6,6 +6,10 @@ If you ever use the elevator, subtitles to watch that cat video during a boring 
 
 This app is the base for a hands on workshop for those interested in learning how to get started.
 
+## Demo
+
+<https://m2d2co.github.io/accessibility-basics-vue/>
+
 ## Getting Started
 
 ### Branches
@@ -21,14 +25,17 @@ This app is the base for a hands on workshop for those interested in learning ho
 ### Other scripts
 
 * `$ npm run build`: compile and minify for production
-* `$ npm run lint`: lint files
+  * production deploy is configured to deploy to github pages for this repository
+* `$ npm run lint`: lints files
+* `$ ./deploy.sh`: builds and commits to gh-pages which deploys to github
+  * deploys to: <https://m2d2co.github.io/accessibility-basics-vue/>
+  * if you get a `no such file or directory` error, you may have to make it an executable: `$ chmod +x deploy.sh`
 
 _Note:_ A modern browser is necessary to run this project
 
 ## Technologies Used
 
-* CSS3 / SASS
-* HTML5
-* IndexedDb
-* JavaScript ES6 syntax
-* Vue
+* [CSS3](https://www.w3.org/Style/CSS/Overview.en.html) / [SCSS](https://sass-lang.com/)
+* [HTML5](https://www.w3.org/TR/html52/)
+* [IndexedDb](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+* [Vue](https://vuejs.org/)
