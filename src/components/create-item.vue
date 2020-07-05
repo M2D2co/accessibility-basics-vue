@@ -1,7 +1,19 @@
 <template>
-  <form class="form">
-    <label class="label">Todo Item:</label>
-    <input type="text" placeholder="I need to...">
+  <form
+    class="form"
+    @submit="onSubmit"
+  >
+    <label for="item" class="label">Todo Item:</label>
+    <input
+      name="item"
+      id="item"
+      type="text"
+      placeholder="I need to.."
+      v-model="item"
+      max-length="500"
+      required
+      autocomplete="todo"
+    >
     <button type="submit" aria-label="add item to todo list">
       <img src="../assets/img/add.svg" alt="">
     </button>
@@ -11,6 +23,18 @@
 <script>
 export default {
   name: 'CreateItem',
+  data() {
+    return {
+      item: '',
+    };
+  },
+  methods: {
+    onSubmit(event) {
+      event.preventDefault();
+      this.$store.dispatch('createTodo', this.item);
+      this.item = '';
+    },
+  },
 };
 </script>
 
