@@ -1,17 +1,20 @@
 <template>
-  <footer id="footer" class="footer">
+  <div id="footer" class="footer">
     <div>Happy Coding!</div>
     <div class="twitter">
-      <a href="https://twitter.com/Martine_Dowden" rel="noopener" target="_blank">@Martine_Dowden</a>
-      <a href="https://twitter.com/mrdowden" rel="noopener" target="_blank">@mrdowden</a>
+      <div class="link" v-on:click="navigate('https://twitter.com/Martine_Dowden')">@Martine_Dowden</div>
+      <div class="link"  v-on:click="navigate('https://twitter.com/Martine_Dowden')">@mrdowden</div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
 
 export default {
   name: 'Footer',
+  methods: {
+    navigate(val) { this.$window.location.href = val; },
+  },
 };
 </script>
 
@@ -19,6 +22,7 @@ export default {
   @use '../assets/sass/theme';
 
   .footer {
+    color: theme.$accent;
     border-top: solid 1px theme.$accent2;
     margin-top: auto;
     text-align: center;
@@ -27,7 +31,7 @@ export default {
   .twitter {
     display: flex;
     justify-content: space-around;
-    & a:before {
+    & .link:before {
       content: url('../assets/img/twitter.svg');
       display: inline-block;
       width: 1.5rem;
@@ -40,6 +44,6 @@ export default {
       display: flex;
       justify-content: space-between;
     }
-    .twitter a { margin-left: 3ch; }
+    .twitter .link { margin-left: 3ch; }
   }
 </style>

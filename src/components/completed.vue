@@ -1,35 +1,29 @@
 <template>
-  <section id="completed" class="card todo" aria-live="polite">
-    <section class="todo-list">
-      <h2 class="title">Completed List</h2>
+  <div id="completed" class="card todo">
+    <div class="todo-list">
+      <div class="title">Completed List</div>
       <div v-if="completedTodos.length < 1" class="no-data">
-        <img src="../assets/img/completed-no-data.svg" alt="">
+        <img src="../assets/img/completed-no-data.svg">
         <p>No completed tasks yet. Check a task in the todo list above to mark it as complete.</p>
       </div>
-      <ul v-if="completedTodos.length > 0" class="completed-list">
-        <li class="list-item" v-for="(todo, index) in completedTodos" v-bind:key="todo.key">
-          <label class="label">
-            <input
+      <div v-if="completedTodos.length > 0" class="completed-list">
+        <div class="list-item" v-for="(todo, index) in completedTodos" v-bind:key="todo.key">
+          <input
               :name="'listItem' + todo.id"
               type="checkbox"
               checked
               v-model="completedTodos[index].selected"
               v-on:change="onSelect(todo.id)"
           >
-            {{ todo.item }}
-          </label>
-          <button
-            type="button"
+          <label class="label">{{ todo.item }}</label>
+          <div
             class="button delete"
-            aria-label="delete"
-            :aria-describedby="'listItem' + todo.id"
             v-on:click="onDelete(todo.id)"
-          >
-          </button>
-        </li>
-      </ul>
-    </section>
-  </section>
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -60,11 +54,13 @@ export default {
   .completed-list {
     list-style-type: none;
     padding-left: 0;
+    margin: 1em 0;
   }
   .list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    input + label { margin-right: auto; }
   }
   .label {
     display: block;

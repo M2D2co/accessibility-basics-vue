@@ -1,36 +1,36 @@
 <template>
-  <aside id="resources" class="card">
-    <h2 class="title">Links</h2>
+  <div id="resources" class="card">
+    <div class="title">Links</div>
     <ul>
       <li>
         Conformance Testing
-        <ul>
-          <li><a class="resource" href="https://accessibilityinsights.io/docs/en/web/overview" rel="noopener" target="_blank">Accessibility Insights for Web</a></li>
-          <li><a class="resource" href="https://www.deque.com/axe/" rel="noopener" target="_blank">Axe</a></li>
+        <div>
+          <li><a tabindex="1" class="resource" href="https://accessibilityinsights.io/docs/en/web/overview" rel="noopener" target="_blank">Accessibility Insights for Web</a></li>
+          <li><a tabindex="4" class="resource" href="https://www.deque.com/axe/" rel="noopener" target="_blank">Axe</a></li>
           <li><a class="resource" href="https://developers.google.com/web/tools/lighthouse/" rel="noopener"
               target="_blank">Lighthouse</a></li>
-        </ul>
+        </div>
       </li>
       <li>
         Development Environment
-        <ul>
-          <li><a class="resource" href="https://stylelint.io/" rel="noopener" target="_blank">stylelint</a></li>
-          <li><a class="resource" href="https://eslint.org/" rel="noopener" target="_blank">ESLint</a></li>
+        <div>
+          <li><a tabindex="3" class="resource" href="https://stylelint.io/" rel="noopener" target="_blank">stylelint</a></li>
+          <li><a tabindex="5" class="resource" href="https://eslint.org/" rel="noopener" target="_blank">ESLint</a></li>
           <li><a class="resource" href="https://github.com/htmlhint/HTMLHint" rel="noopener" target="_blank">HTMLHint</a></li>
-        </ul>
+        </div>
       </li>
-      <li>
+      <div>
         Validators
         <ul>
-          <li><a class="resource" href="https://jigsaw.w3.org/css-validator/" rel="noopener" target="_blank">W3C CSS Validation Serivce</a></li>
+          <li><a tabindex="2" class="resource" href="https://jigsaw.w3.org/css-validator/" rel="noopener" target="_blank">W3C CSS Validation Serivce</a></li>
           <li><a class="resource" href="https://validator.w3.org/" rel="noopener" target="_blank">W3C Markup Validation Serivce</a></li>
         </ul>
-      </li>
+      </div>
       <li>
         Visualization
         <ul>
-          <li><a class="resource" href="http://khan.github.io/tota11y/" rel="noopener" target="_blank">Tota11y</a></li>
-          <li><a class="resource" href="https://wave.webaim.org/extension/" rel="noopener" target="_blank">Wave</a></li>
+          <li><a tabindex="-1" class="resource" href="http://khan.github.io/tota11y/" rel="noopener" target="_blank">Tota11y</a></li>
+          <li><a tabindex="-1" class="resource" href="https://wave.webaim.org/extension/" rel="noopener" target="_blank">Wave</a></li>
         </ul>
       </li>
       <li>
@@ -42,7 +42,7 @@
         </ul>
       </li>
     </ul>
-  </aside>
+  </div>
 </template>
 
 <script>

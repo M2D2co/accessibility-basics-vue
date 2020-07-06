@@ -6,9 +6,8 @@ import Api from './api';
 
 Api.initialize();
 
-Vue.config.productionTip = false;
-
 new Vue({
   render: (h) => h(App),
   store,
 }).$mount('#app');
+Vue.prototype.$window = window;

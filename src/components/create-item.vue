@@ -1,22 +1,20 @@
 <template>
-  <form
+  <div
     class="form"
     @submit="onSubmit"
   >
-    <label for="item" class="label">Todo Item:</label>
     <input
       name="item"
-      id="item"
       type="text"
       placeholder="I need to.."
       v-model="item"
       max-length="500"
       required
     >
-    <button class="submit" type="submit" aria-label="add item to todo list" :disabled="!item">
+    <div class="submit" v-on:click="onSubmit()">
       <img src="../assets/img/add.svg" alt="">
-    </button>
-  </form>
+    </div>
+  </div>
 </template>
 
 <script>

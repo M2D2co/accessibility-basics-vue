@@ -1,10 +1,10 @@
 <template>
-  <header id="header" class="header">
-    <h1 class="title">
-      <img alt="" src="../assets/img/logo.svg">
+  <div id="header" class="header">
+    <div class="title">
+      <img src="../assets/img/logo.svg">
       Accessibility Basics
-    </h1>
-  </header>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,4 +16,8 @@ export default {
 
 <style lang="scss" scoped>
   img { height: 1.5ex; }
+  div.title {
+    margin: 1ex 0;
+    font-size: x-large;
+  }
 </style>
